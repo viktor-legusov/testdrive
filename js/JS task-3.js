@@ -241,17 +241,6 @@
 // console.log( sumArray([ -6, -20, -1, -10, -12 ]));     // -28 );
 // console.log( sumArray([ -6, 20, -1, 10, -12 ])  );     // 3 );
 
-////////////////////////////////////////............неправильно.............................//////////////////////////
-
-// function invert(array) {
-//     return array[i*-1];
-//  }
-
-//  console.log(invert([1,2,3,4,5]));     // [-1,-2,-3,-4,-5]);
-//  console.log(invert([1,-2,3,-4,5]));     // [-1,2,-3,4,-5]);
-//  console.log(invert([]));     // []);
-//  console.log(invert([0]));     // [0]);
-
 /////////////////////////////////......якщо в рядку є Х.........................//////////////////////////////
 
 // function check(a, x) {
@@ -332,3 +321,200 @@
 // console.log(smash(["hello", "world"]));        // "hello world"
 // console.log(smash(["hello", "amazing", "world"]));        // "hello amazing world"
 // console.log(smash(["this", "is", "a", "really", "long", "sentence"]));        // "this is a really long sentence"
+
+/////////////////////////////..........замінити в рядку цифри на букви.............///////////////////////////////////
+// function correct(string) {
+	
+// 	return string.replace(/0/g, 'O').replace(/1/g, 'I').replace(/5/g, 'S');
+
+// }
+
+//     console.log(correct("L0ND0N")) //"LONDON");
+//     console.log(correct("DUBL1N")) //"DUBLIN");
+//     console.log(correct("51NGAP0RE")) //"SINGAPORE");
+//     console.log(correct("BUDAPE5T")) //"BUDAPEST");
+//     console.log(correct("PAR15")) //"PARIS");
+
+//////////////////////////////////............суму числ масиву поділити на довжину масиву...................//////////////////////////
+
+// function findAverage(array) {
+//     let total = 0;
+//   for (let i = 0; i < array.length; i+=1) {
+//     total = total + array[i]
+//   }
+//   return total/array.length  
+// }
+
+//  console.log(findAverage([1,1,1])) // 1);
+//  console.log(findAverage([1,2,3])) // 2);
+//  console.log(findAverage([1,2,3,4])) // 2.5);
+
+///////////////////////////////......взяти з масиву тільки цифри............................///////////////////////////////////
+
+// function filter_list(l) {
+// 	return l.filter(v => typeof v == "number");
+// }
+
+//   console.log(filter_list([1,2,'a','b']));      //[1,2])     
+//   console.log(filter_list([1,'a','b',0,15]));    //[1,0,15])     
+//   console.log(filter_list([1,2,'aasf','1','123',123]));      //[1,2,123])     
+
+
+/////////////////////////////////........поставити букви по порядку по одній............................./////////////////////////////////////
+
+
+
+// function longest(s1, s2) {
+//   const arr = s1 + s2;
+//   return arr.split('').sort().filter(function (element, index, array) {
+//     return element !== array[index - 1];}).join('')
+// }
+
+//     console.log(longest("aretheyhere", "yestheyarehere"));    // "aehrsty")
+//     console.log(longest("loopingisfunbutdangerous", "lessdangerousthancoding"));    // "abcdefghilnoprstu")
+//     console.log(longest("inmanylanguages", "theresapairoffunctions"));    // "acefghilmnoprstuy");  
+
+///////////////////////////////////////.......сума парна чи ні........................///////////////////////////////////
+
+// function oddOrEven(array) {
+//    if (array.length < 1) {
+//     return 'even'
+//    }
+//    let summ =0;
+//    for (let i = 0; i < array.length; i+=1) {
+//     summ += array[i];
+//    }
+//    if (summ % 2 ===0) {
+//     return 'even';
+//    }
+//    return 'odd'
+//  }
+
+// console.log(oddOrEven([0, 1, 5]));    // 'even')
+// console.log(oddOrEven([0, 1, 3]));    // 'even')
+// console.log(oddOrEven([1023, 1, 2]));    // 'even')
+// console.log(oddOrEven([0]));    // 'even')
+// console.log(oddOrEven([1]));    // 'odd')
+// console.log(oddOrEven([]));    // 'even')
+
+//////////////////////////////////.......квадрат кожного числа рядка.............................//////////////////////////////////////
+
+// function squareDigits(num){
+//     const res =  +num.toString().split('').map(a=> a * a).join('');
+//     return res   
+//   }
+
+ 
+// console.log(squareDigits(3212));   // 9414);  
+// console.log(squareDigits(2112));   // 4114); 
+// console.log(squareDigits(0));   // 0);
+
+///////////////////////////............ приймає і повертає масив усіх цілих чисел між ними........///////////
+
+// function between(a, b) {
+//     // your code here
+//     let arr = []
+//     for (let i = a;i <= b; i++){ 
+//         arr.push(i)
+//     }
+//     return arr
+//   }
+// console.log(between(1, 4));      // [1, 2, 3, 4]
+// console.log(between(-2, 2));      // [-2, -1, 0, 1, 2]
+
+/////////////////////////.............витягти з рядку тільки число....................../////////////////////////////////
+
+// function getAge(inputString){     
+//      return parseInt(inputString);
+//     }
+
+// console.log(getAge("4 years old"));   // 4
+// console.log(getAge("9 years old"));   // 9
+// console.log(getAge("1 year old"));   // 1 
+
+/////////////////////////////////////.........пін код на 4 або 6 цифр.........................///////////////////////////////
+
+// function validatePIN (pin) {
+//     return /^(\d{4}$|\d{6}$)/.test(pin);
+//   }
+
+// console.log(validatePIN("1"));       //false
+// console.log(validatePIN("12"));       //false
+// console.log(validatePIN("123"));       //false
+// console.log(validatePIN("12345"));       //false
+// console.log(validatePIN("1234567"));       //false
+// console.log(validatePIN("-1234"));       //false
+// console.log(validatePIN("1.234"));       //false
+// console.log(validatePIN("-1.234"));       //false
+// console.log(validatePIN("00000000"));       //false
+
+//////////////////////////..........сума аренди зі знижкою в залежності від кількості днів.........//////////////////////////////////
+
+// function rentalCarCost(d) {
+//     if(d < 3){
+//       return d*40;
+//     }else if( 3 <= d && d < 7){
+//       return (d*40)-20;
+//     } else if(d >= 7){
+//     return (d*40)-50}
+//   }
+
+// console.log(rentalCarCost(1));     // 40
+// console.log(rentalCarCost(2));     // 80
+// console.log(rentalCarCost(3));     // 100
+// console.log(rentalCarCost(4));     // 140
+// console.log(rentalCarCost(5));     // 180
+// console.log(rentalCarCost(6));     // 220
+// console.log(rentalCarCost(7));     // 230
+// console.log(rentalCarCost(8));     // 270
+// console.log(rentalCarCost(9));     // 310
+// console.log(rentalCarCost(10));     // 350
+// console.log(rentalCarCost(11));     // 390
+// console.log(rentalCarCost(12));     // 430
+
+//////////////////////////.........оцінка за виконані роботи..................////////////////////////////////
+
+// function finalGrade (exam, projects) {
+//     if(exam > 90 || projects > 10) return 100;
+//     if(exam > 75 & projects >= 5) return 90;
+//     if(exam > 50 & projects >= 2) return 75;
+//     return 0;
+//   }
+
+// console.log(finalGrade(100, 12));    // 100
+// console.log(finalGrade(85, 5));    // 90
+// console.log(finalGrade(55, 1)); 
+// console.log(finalGrade(10, 2)); 
+// console.log(finalGrade(10, 5)); 
+
+//////////////////////////////............мови і привітання...................../////////////////////////////
+
+// function greet(language) {
+// 	const out = {
+// english: 'Welcome',
+// czech: 'Vitejte',
+// danish: 'Velkomst',
+// dutch: 'Welkom',
+// estonian: 'Tere tulemast',
+// finnish: 'Tervetuloa',
+// flemish: 'Welgekomen',
+// french: 'Bienvenue',
+// german: 'Willkommen',
+// irish: 'Failte',
+// italian: 'Benvenuto',
+// latvian: 'Gaidits',
+// lithuanian: 'Laukiamas',
+// polish: 'Witamy',
+// spanish: 'Bienvenido',
+// swedish: 'Valkommen',
+// welsh: 'Croeso'
+//   }
+//   return out[language] || 'Welcome'
+// }
+
+// console.log(greet('english'));                    // 'Welcome'
+// console.log(greet('dutch'));                    // 'Welkom'
+// console.log(greet('IP_ADDRESS_INVALID'));      // 'Welcome'
+
+///////////////////////////////...................................../////////////////////////////
+
